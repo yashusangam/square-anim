@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(247, 188, 28);
+    
+}
+.box{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+    justify-content:center ;
+    align-items: center;
+}
+.box::before{
+    content: "";
+    height:100% ;
+    width: 100%;
+    position:absolute;
+    background-color: rgb(247, 188, 28);
+    animation: hai 4s alternate-reverse infinite; 
+    border: 5px solid rgb(247, 242, 242);
+    filter: blur(1px);
+    border-radius: 10%;
+}
+.box::after{
+    content:"yashu";
+    color:#ee319f ;
+    font-size:3rem;
+    font-style: italic;
+    letter-spacing: 4px;
+    text-shadow:3px 4px 5px black;
+    height: 280px;
+    width: 300px;
+    position: absolute;
+    background-color:rgb(247, 188, 28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: hlo 4s alternate-reverse infinite; 
+    border: 5px solid rgb(240, 233, 233);
+    filter: blur(1px);
+    border-radius: 10%;
+}
+@keyframes hai{
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+@keyframes hlo{
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+ 
